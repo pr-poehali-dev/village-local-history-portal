@@ -545,6 +545,50 @@ export default function Index() {
         </div>
       </section>
 
+      {/* Map */}
+      <section style={{ background: "#f0e6d0", padding: "80px 0", borderTop: "1px solid #c4a882" }}>
+        <div className="max-w-5xl mx-auto px-6">
+          <div className="section-divider mb-2">
+            <span style={{ fontFamily: "Cormorant, serif", fontSize: "13px", letterSpacing: "0.2em", textTransform: "uppercase", color: "#8b6330" }}>На карте</span>
+          </div>
+          <h2 style={{ fontFamily: "Cormorant, serif", fontSize: "clamp(32px, 5vw, 52px)", color: "#1c1410", textAlign: "center", fontWeight: 600, marginBottom: "12px" }}>
+            Выдрино на Байкале
+          </h2>
+          <p style={{ textAlign: "center", color: "#6b4a22", fontFamily: "IM Fell English, serif", fontStyle: "italic", fontSize: "15px", marginBottom: "36px" }}>
+            Кабанский район · южное побережье Байкала · река Снежная
+          </p>
+
+          <div style={{ position: "relative", border: "2px solid #c9a84c", boxShadow: "0 4px 24px rgba(44,28,14,0.15)", overflow: "hidden" }}>
+            {/* Декоративные угловые элементы */}
+            <div style={{ position: "absolute", top: 8, left: 8, width: 24, height: 24, borderTop: "2px solid #c9a84c", borderLeft: "2px solid #c9a84c", zIndex: 10, pointerEvents: "none" }} />
+            <div style={{ position: "absolute", top: 8, right: 8, width: 24, height: 24, borderTop: "2px solid #c9a84c", borderRight: "2px solid #c9a84c", zIndex: 10, pointerEvents: "none" }} />
+            <div style={{ position: "absolute", bottom: 8, left: 8, width: 24, height: 24, borderBottom: "2px solid #c9a84c", borderLeft: "2px solid #c9a84c", zIndex: 10, pointerEvents: "none" }} />
+            <div style={{ position: "absolute", bottom: 8, right: 8, width: 24, height: 24, borderBottom: "2px solid #c9a84c", borderRight: "2px solid #c9a84c", zIndex: 10, pointerEvents: "none" }} />
+
+            <iframe
+              title="Карта — село Выдрино"
+              src="https://www.openstreetmap.org/export/embed.html?bbox=109.3%2C51.45%2C109.65%2C51.65&layer=mapnik&marker=51.547%2C109.483"
+              style={{ width: "100%", height: "460px", border: "none", display: "block", filter: "sepia(25%) contrast(0.95) brightness(0.97)" }}
+              loading="lazy"
+            />
+          </div>
+
+          {/* Подпись под картой */}
+          <div className="flex flex-wrap justify-center gap-6 mt-5">
+            {[
+              { icon: "MapPin", text: "51°33′ с.ш. 109°29′ в.д." },
+              { icon: "Waves", text: "Берег Байкала, 456 м н.у.м." },
+              { icon: "TreePine", text: "Байкальский биосферный заповедник" },
+            ].map((item, i) => (
+              <div key={i} className="flex items-center gap-2">
+                <Icon name={item.icon as "MapPin" | "Waves" | "TreePine"} size={14} style={{ color: "#8b6330" }} />
+                <span style={{ fontSize: "12px", color: "#6b4a22", fontFamily: "IBM Plex Sans, sans-serif" }}>{item.text}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Contacts */}
       <section id="contacts" style={{ background: "#e8d8c0", padding: "80px 0", borderTop: "1px solid #c4a882" }}>
         <div className="max-w-4xl mx-auto px-6 text-center">
