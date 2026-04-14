@@ -7,6 +7,7 @@ const NAV_ITEMS = [
   { id: "persons", label: "Личности" },
   { id: "archive", label: "Архив" },
   { id: "gallery", label: "Галерея" },
+  { id: "organizations", label: "Организации" },
   { id: "documents", label: "Документы" },
   { id: "contacts", label: "Контакты" },
 ];
@@ -500,6 +501,43 @@ export default function Index() {
                   <div style={{ fontFamily: "Cormorant, serif", fontSize: "14px", color: "#f4ead8", fontWeight: 500 }}>{item.title}</div>
                   <div style={{ fontSize: "11px", color: "#c9a84c" }}>{item.year}</div>
                 </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Organizations */}
+      <section id="organizations" style={{ background: "#e8d8c0", padding: "80px 0", borderTop: "1px solid #c4a882", borderBottom: "1px solid #c4a882" }}>
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="section-divider mb-2">
+            <span style={{ fontFamily: "Cormorant, serif", fontSize: "13px", letterSpacing: "0.2em", textTransform: "uppercase", color: "#8b6330" }}>Организации</span>
+          </div>
+          <h2 style={{ fontFamily: "Cormorant, serif", fontSize: "clamp(32px, 5vw, 52px)", color: "#1c1410", textAlign: "center", fontWeight: 600, marginBottom: "12px" }}>
+            Организации села
+          </h2>
+          <p style={{ textAlign: "center", color: "#6b4a22", fontFamily: "IM Fell English, serif", fontStyle: "italic", fontSize: "15px", marginBottom: "48px" }}>
+            Учреждения и предприятия, составляющие жизнь Выдрино
+          </p>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {[
+              { icon: "School", name: "Выдринская средняя общеобразовательная школа", type: "Образование", desc: "Основная школа села, ведёт обучение с начальных по старшие классы." },
+              { icon: "Cross", name: "Фельдшерско-акушерский пункт", type: "Здравоохранение", desc: "Медицинская помощь жителям Выдрино и прилегающих населённых пунктов." },
+              { icon: "BookOpen", name: "Сельская библиотека", type: "Культура", desc: "Хранит фонд краеведческой литературы, периодику и архив местных изданий." },
+              { icon: "Music", name: "Дом культуры", type: "Культура", desc: "Центр общественной и культурной жизни: концерты, выставки, кружки." },
+              { icon: "Landmark", name: "Администрация Выдринского сельского поселения", type: "Управление", desc: "Орган местного самоуправления, решение вопросов жизнеобеспечения села." },
+              { icon: "Train", name: "Железнодорожная станция Выдрино", type: "Транспорт", desc: "Станция на Транссибирской магистрали, связывающая село с регионом с 1899 года." },
+            ].map((org, i) => (
+              <div key={i} className="card-hover" style={{ background: "#f8f0e0", border: "1px solid #c4a882", padding: "24px 20px" }}>
+                <div className="flex items-start gap-3 mb-3">
+                  <div style={{ width: "40px", height: "40px", background: "rgba(201,168,76,0.15)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, border: "1px solid rgba(201,168,76,0.3)" }}>
+                    <Icon name={org.icon as "School" | "Cross" | "BookOpen" | "Music" | "Landmark" | "Train"} size={18} style={{ color: "#8b6330" }} />
+                  </div>
+                  <span style={{ fontSize: "10px", color: "#c9a84c", letterSpacing: "0.1em", textTransform: "uppercase", fontWeight: 600, paddingTop: "4px" }}>{org.type}</span>
+                </div>
+                <div style={{ fontFamily: "Cormorant, serif", fontSize: "17px", color: "#1c1410", fontWeight: 600, marginBottom: "8px", lineHeight: 1.3 }}>{org.name}</div>
+                <div style={{ fontSize: "13px", color: "#5c4030", lineHeight: 1.6 }}>{org.desc}</div>
               </div>
             ))}
           </div>
