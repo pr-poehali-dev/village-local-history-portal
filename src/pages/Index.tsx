@@ -528,11 +528,14 @@ export default function Index() {
               { icon: "Music", name: "Дом культуры", type: "Культура", desc: "Центр общественной и культурной жизни: концерты, выставки, кружки." },
               { icon: "Landmark", name: "Администрация Выдринского сельского поселения", type: "Управление", desc: "Орган местного самоуправления, решение вопросов жизнеобеспечения села." },
               { icon: "Train", name: "Железнодорожная станция Выдрино", type: "Транспорт", desc: "Станция на Транссибирской магистрали, связывающая село с регионом с 1899 года." },
+              { icon: "Sparkles", name: "Дом детского творчества", type: "Образование", desc: "Развитие творческих способностей детей: кружки, секции, конкурсы и фестивали." },
+              { icon: "Piano", name: "Детская школа искусств", type: "Образование", desc: "Обучение музыке, изобразительному искусству и хореографии для детей Выдрино." },
+              { icon: "Hospital", name: "Выдринская участковая больница", type: "Здравоохранение", desc: "Стационарная медицинская помощь жителям Выдрино и прилегающих сёл Кабанского района." },
             ].map((org, i) => (
               <div key={i} className="card-hover" style={{ background: "#f8f0e0", border: "1px solid #c4a882", padding: "24px 20px" }}>
                 <div className="flex items-start gap-3 mb-3">
                   <div style={{ width: "40px", height: "40px", background: "rgba(201,168,76,0.15)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, border: "1px solid rgba(201,168,76,0.3)" }}>
-                    <Icon name={org.icon as "School" | "Cross" | "BookOpen" | "Music" | "Landmark" | "Train"} size={18} style={{ color: "#8b6330" }} />
+                    <Icon name={org.icon as "School" | "Cross" | "BookOpen" | "Music" | "Landmark" | "Train" | "Sparkles" | "Piano" | "Hospital"} size={18} style={{ color: "#8b6330" }} />
                   </div>
                   <span style={{ fontSize: "10px", color: "#c9a84c", letterSpacing: "0.1em", textTransform: "uppercase", fontWeight: 600, paddingTop: "4px" }}>{org.type}</span>
                 </div>
