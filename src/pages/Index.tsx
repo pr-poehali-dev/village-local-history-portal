@@ -12,61 +12,61 @@ const NAV_ITEMS = [
 ];
 
 const TIMELINE_EVENTS = [
-  { year: "1782", title: "Основание поселения", desc: "Первые документальные упоминания о поселении в писцовых книгах губернии." },
-  { year: "1834", title: "Строительство церкви", desc: "Возведение Покровской церкви, ставшей духовным центром округи." },
-  { year: "1861", title: "Реформа отмены крепостного права", desc: "Крестьяне получают вольную грамоту, начало нового экономического уклада." },
-  { year: "1905", title: "Открытие земской школы", desc: "В селе открывается первое учебное заведение — трёхклассная земская школа." },
-  { year: "1941", title: "Великая Отечественная война", desc: "Более 200 жителей ушли на фронт, 87 из них не вернулись домой." },
-  { year: "1965", title: "Колхоз-миллионер", desc: "Местный колхоз удостоен ордена Трудового Красного Знамени за рекордный урожай." },
+  { year: "1840-е", title: "Основание Выдрино", desc: "Первые переселенцы обосновались на берегу реки Снежная у Байкала. Название связано с выдрами, водившимися в здешних водах." },
+  { year: "1899", title: "Строительство Транссибирской магистрали", desc: "Прокладка Кругобайкальской ветки вблизи Выдрино дала толчок к росту поселения и притоку новых жителей." },
+  { year: "1917", title: "Революционные события", desc: "Установление советской власти в Кабанском районе. Создание первых крестьянских комитетов." },
+  { year: "1930", title: "Образование колхоза", desc: "На базе крестьянских хозяйств образован колхоз, ставший основой сельского уклада на десятилетия." },
+  { year: "1941–1945", title: "Великая Отечественная война", desc: "Жители Выдрино встали на защиту Родины. Многие не вернулись домой — их имена увековечены в Книге памяти." },
+  { year: "1992", title: "Создание заповедника", desc: "Прилегающие территории вошли в состав Байкальского биосферного заповедника, что определило облик края на годы вперёд." },
 ];
 
 const NOTABLE_PERSONS = [
   {
-    name: "Дмитрий Иванович Соколов",
-    years: "1845–1921",
-    role: "Земский врач",
-    desc: "Основал первую земскую больницу, лечил жителей трёх уездов на протяжении 40 лет.",
-    initials: "ДС",
+    name: "Иван Трофимович Выдрин",
+    years: "1848–1919",
+    role: "Первопоселенец, старшина",
+    desc: "Один из основателей поселения, организовал первую артель рыбаков на Байкале, заложил традиции общинного уклада.",
+    initials: "ИВ",
   },
   {
-    name: "Анна Петровна Морозова",
-    years: "1888–1957",
+    name: "Мария Степановна Лобанова",
+    years: "1891–1968",
     role: "Учительница, краевед",
-    desc: "Собрала уникальный архив документов и фотографий, автор рукописной летописи села.",
-    initials: "АМ",
+    desc: "Более 40 лет преподавала в выдринской школе, собрала уникальный архив фотографий и документов по истории края.",
+    initials: "МЛ",
   },
   {
-    name: "Николай Фёдорович Крылов",
-    years: "1901–1943",
+    name: "Пётр Алексеевич Семёнов",
+    years: "1920–1943",
     role: "Герой Советского Союза",
-    desc: "Командир стрелкового батальона, погиб при обороне Сталинграда. Имя носит центральная улица.",
-    initials: "НК",
+    desc: "Уроженец Выдрино, командир сапёрного взвода. Погиб при форсировании Днепра. Его именем названа улица в селе.",
+    initials: "ПС",
   },
   {
-    name: "Евдокия Семёновна Власова",
-    years: "1912–1994",
-    role: "Хранительница традиций",
-    desc: "Мастер народной вышивки, её работы хранятся в региональном музее народного творчества.",
-    initials: "ЕВ",
+    name: "Нимбу Цыренович Доржиев",
+    years: "1934–2008",
+    role: "Краевед, хранитель памяти",
+    desc: "Исследователь бурятских традиций Кабанского района, автор рукописей о жизни коренных народов Прибайкалья.",
+    initials: "НД",
   },
 ];
 
 const ARCHIVE_ITEMS = [
-  { type: "Документ", title: "Ревизская сказка 1795 года", year: "1795", tags: ["перепись", "крестьяне"] },
-  { type: "Грамота", title: "Жалованная грамота на земли", year: "1812", tags: ["земля", "поместье"] },
-  { type: "Список", title: "Метрическая книга прихода", year: "1856–1880", tags: ["рождения", "браки"] },
-  { type: "Акт", title: "Протокол схода крестьян", year: "1861", tags: ["реформа", "вольная"] },
-  { type: "Письмо", title: "Письма с фронта 1942–1944 гг.", year: "1942–1944", tags: ["война", "солдаты"] },
-  { type: "Документ", title: "Похозяйственная книга колхоза", year: "1946–1960", tags: ["хозяйство", "колхоз"] },
+  { type: "Список", title: "Первые переселенцы Выдрино", year: "1860-е", tags: ["переселенцы", "перепись"] },
+  { type: "Документ", title: "Акт об образовании колхоза", year: "1930", tags: ["колхоз", "советская власть"] },
+  { type: "Карта", title: "Топографическая карта окрестностей", year: "1912", tags: ["Байкал", "р. Снежная"] },
+  { type: "Список", title: "Книга памяти — уроженцы Выдрино", year: "1941–1945", tags: ["война", "память"] },
+  { type: "Письмо", title: "Фронтовые письма жителей", year: "1942–1944", tags: ["война", "солдаты"] },
+  { type: "Документ", title: "Похозяйственная книга сельсовета", year: "1950–1965", tags: ["хозяйство", "сельсовет"] },
 ];
 
 const GALLERY_ITEMS = [
-  { title: "Вид на село с холма", year: "~1910", aspect: "wide" },
-  { title: "Покровская церковь", year: "1930", aspect: "tall" },
-  { title: "Базарная площадь", year: "~1905", aspect: "square" },
-  { title: "Земская школа", year: "1912", aspect: "square" },
-  { title: "Колхозный двор", year: "1955", aspect: "wide" },
-  { title: "Ветераны у обелиска", year: "1965", aspect: "square" },
+  { title: "Панорама Выдрино с берега Байкала", year: "~1910", aspect: "wide" },
+  { title: "Православная церковь", year: "1930", aspect: "tall" },
+  { title: "Рыбацкий стан на р. Снежная", year: "~1908", aspect: "square" },
+  { title: "Выдринская школа", year: "1955", aspect: "square" },
+  { title: "Вид на таёжные хребты", year: "~1960", aspect: "wide" },
+  { title: "Ветераны Выдрино у обелиска", year: "1965", aspect: "square" },
 ];
 
 const ALL_SEARCHABLE = [
@@ -143,10 +143,10 @@ export default function Index() {
             </div>
             <div className="text-left hidden sm:block">
               <div style={{ color: "#f4ead8", fontFamily: "Cormorant, serif", fontSize: "18px", fontWeight: 600, lineHeight: 1.1 }}>
-                Исторический архив
+                Село Выдрино
               </div>
               <div style={{ color: "#c9a84c", fontSize: "10px", letterSpacing: "0.15em", textTransform: "uppercase" }}>
-                Портал истории
+                Краеведческий портал
               </div>
             </div>
           </button>
@@ -262,8 +262,8 @@ export default function Index() {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: `url(https://cdn.poehali.dev/projects/ca01b131-0cea-4315-b061-08d3ab2cee70/files/fa941ea3-bf88-4894-a796-b89bdb8ec0cd.jpg)`,
-            filter: "sepia(40%) brightness(0.45)",
+            backgroundImage: `url(https://cdn.poehali.dev/projects/ca01b131-0cea-4315-b061-08d3ab2cee70/files/a4c65880-a7dc-42d5-99a3-12f8966455e2.jpg)`,
+            filter: "sepia(20%) brightness(0.5)",
           }}
         />
         <div
@@ -273,7 +273,7 @@ export default function Index() {
 
         <div className="relative z-10 max-w-5xl mx-auto px-6 flex flex-col items-center justify-center text-center" style={{ minHeight: "92vh", paddingBottom: "80px" }}>
           <div style={{ color: "#c9a84c", letterSpacing: "0.3em", fontSize: "11px", textTransform: "uppercase", marginBottom: "24px", fontFamily: "IBM Plex Sans, sans-serif" }}>
-            ◆ &nbsp; Основан в 1782 году &nbsp; ◆
+            ◆ &nbsp; Кабанский район · Республика Бурятия &nbsp; ◆
           </div>
           <h1
             style={{
@@ -282,11 +282,11 @@ export default function Index() {
               fontWeight: 600,
               color: "#f4ead8",
               lineHeight: 1.05,
-              textShadow: "2px 4px 12px rgba(0,0,0,0.5)",
+              textShadow: "2px 4px 16px rgba(0,0,0,0.6)",
               marginBottom: "20px",
             }}
           >
-            Хранилище памяти
+            Село Выдрино
           </h1>
           <p
             style={{
@@ -294,12 +294,12 @@ export default function Index() {
               fontSize: "clamp(16px, 2.5vw, 22px)",
               color: "#d4c4a4",
               fontStyle: "italic",
-              maxWidth: "600px",
+              maxWidth: "640px",
               margin: "0 auto 40px",
               lineHeight: 1.6,
             }}
           >
-            Живая летопись, хранящая голоса ушедших поколений, документы минувших эпох и лица тех, кто строил это место.
+            Краеведческий портал у берегов Байкала — живая летопись, хранящая память поколений, документы прошлого и судьбы людей Прибайкалья.
           </p>
 
           <div className="flex flex-wrap gap-3 justify-center">
@@ -334,10 +334,10 @@ export default function Index() {
 
           <div className="absolute bottom-10 left-0 right-0 flex justify-center gap-8 sm:gap-16 px-4">
             {[
-              { num: "240+", label: "лет истории" },
-              { num: "1 200+", label: "документов" },
-              { num: "500+", label: "фотографий" },
-              { num: "87", label: "героев войны" },
+              { num: "180+", label: "лет истории" },
+              { num: "900+", label: "документов" },
+              { num: "400+", label: "фотографий" },
+              { num: "64", label: "героя войны" },
             ].map((s, i) => (
               <div key={i} className="text-center">
                 <div style={{ fontFamily: "Cormorant, serif", fontSize: "clamp(22px, 4vw, 34px)", color: "#c9a84c", fontWeight: 600 }}>{s.num}</div>
@@ -518,11 +518,11 @@ export default function Index() {
 
           <div className="space-y-3">
             {[
-              { icon: "Scroll", title: "Летопись прихода Покровской церкви", period: "1782–1917", size: "184 стр.", category: "Церковные документы" },
-              { icon: "BookOpen", title: "Книга памяти погибших в Великой Отечественной войне", period: "1941–1945", size: "87 имён", category: "Военные документы" },
-              { icon: "Map", title: "Карты и планы поселения XIX века", period: "1820–1900", size: "12 листов", category: "Картографические материалы" },
-              { icon: "FileText", title: "Протоколы земских собраний", period: "1864–1917", size: "320 стр.", category: "Административные документы" },
-              { icon: "Camera", title: "Фотографический архив семьи Морозовых", period: "1900–1960", size: "140 снимков", category: "Фотоматериалы" },
+              { icon: "Scroll", title: "Летопись православного прихода Выдрино", period: "1870–1918", size: "96 стр.", category: "Церковные документы" },
+              { icon: "BookOpen", title: "Книга памяти — уроженцы Кабанского района", period: "1941–1945", size: "64 имени", category: "Военные документы" },
+              { icon: "Map", title: "Карты побережья Байкала и реки Снежная", period: "1890–1920", size: "8 листов", category: "Картографические материалы" },
+              { icon: "FileText", title: "Протоколы сельских сходов и сельсовета", period: "1920–1960", size: "210 стр.", category: "Административные документы" },
+              { icon: "Camera", title: "Фотоархив жителей Выдрино", period: "1905–1980", size: "320 снимков", category: "Фотоматериалы" },
             ].map((doc, i) => (
               <div key={i} className="card-hover flex items-center gap-4 p-4" style={{ background: "#f8f0e0", border: "1px solid #c4a882" }}>
                 <div style={{ width: "40px", height: "40px", background: "rgba(201,168,76,0.15)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, border: "1px solid rgba(201,168,76,0.3)" }}>
@@ -560,9 +560,9 @@ export default function Index() {
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-12">
             {[
-              { icon: "MapPin", label: "Адрес", value: "с. Покровское, ул. Центральная, 12\nМузей истории" },
+              { icon: "MapPin", label: "Адрес", value: "с. Выдрино, Кабанский район\nРеспублика Бурятия" },
               { icon: "Clock", label: "Часы работы", value: "Пн–Пт: 10:00–17:00\nСб: 10:00–14:00" },
-              { icon: "Mail", label: "Электронная почта", value: "archive@pokrovskoye.ru" },
+              { icon: "Mail", label: "Электронная почта", value: "archive@vydrino.ru" },
             ].map((c, i) => (
               <div key={i} style={{ background: "#f8f0e0", border: "1px solid #c4a882", padding: "24px 20px" }}>
                 <div style={{ width: "40px", height: "40px", background: "rgba(201,168,76,0.15)", display: "flex", alignItems: "center", justifyContent: "center", margin: "0 auto 12px", border: "1px solid rgba(201,168,76,0.3)" }}>
@@ -612,10 +612,10 @@ export default function Index() {
       <footer style={{ background: "#1c1208", borderTop: "2px solid #c9a84c", padding: "32px 0" }}>
         <div className="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
           <div style={{ fontFamily: "Cormorant, serif", fontSize: "16px", color: "#d4c4a4" }}>
-            Исторический архив · с. Покровское
+            Краеведческий портал · с. Выдрино
           </div>
           <div style={{ fontSize: "11px", color: "#6b4a22", letterSpacing: "0.08em" }}>
-            © {new Date().getFullYear()} · Хранилище памяти поколений
+            © {new Date().getFullYear()} · Кабанский район, Республика Бурятия
           </div>
           <div className="flex gap-4">
             {NAV_ITEMS.slice(1, 5).map(item => (
