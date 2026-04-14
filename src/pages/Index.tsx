@@ -262,8 +262,8 @@ export default function Index() {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: `url(https://cdn.poehali.dev/projects/ca01b131-0cea-4315-b061-08d3ab2cee70/files/a4c65880-a7dc-42d5-99a3-12f8966455e2.jpg)`,
-            filter: "sepia(20%) brightness(0.5)",
+            backgroundImage: `url(https://cdn.poehali.dev/files/889fe7ce-6e30-4710-9bb1-2dadded787e5.jpg)`,
+            filter: "sepia(15%) brightness(0.48)",
           }}
         />
         <div
