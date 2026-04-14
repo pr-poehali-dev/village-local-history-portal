@@ -522,25 +522,33 @@ export default function Index() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {[
-              { icon: "School", name: "Выдринская средняя общеобразовательная школа", type: "Образование", desc: "Основная школа села, ведёт обучение с начальных по старшие классы." },
-              { icon: "Cross", name: "Фельдшерско-акушерский пункт", type: "Здравоохранение", desc: "Медицинская помощь жителям Выдрино и прилегающих населённых пунктов." },
-              { icon: "BookOpen", name: "Сельская библиотека", type: "Культура", desc: "Хранит фонд краеведческой литературы, периодику и архив местных изданий." },
-              { icon: "Music", name: "Дом культуры", type: "Культура", desc: "Центр общественной и культурной жизни: концерты, выставки, кружки." },
-              { icon: "Landmark", name: "Администрация Выдринского сельского поселения", type: "Управление", desc: "Орган местного самоуправления, решение вопросов жизнеобеспечения села." },
-              { icon: "Train", name: "Железнодорожная станция Выдрино", type: "Транспорт", desc: "Станция на Транссибирской магистрали, связывающая село с регионом с 1899 года." },
-              { icon: "Sparkles", name: "Дом детского творчества", type: "Образование", desc: "Развитие творческих способностей детей: кружки, секции, конкурсы и фестивали." },
-              { icon: "Piano", name: "Детская школа искусств", type: "Образование", desc: "Обучение музыке, изобразительному искусству и хореографии для детей Выдрино." },
-              { icon: "Hospital", name: "Выдринская участковая больница", type: "Здравоохранение", desc: "Стационарная медицинская помощь жителям Выдрино и прилегающих сёл Кабанского района." },
+              { icon: "School", name: "Выдринская средняя общеобразовательная школа", type: "Образование", desc: "Основная школа села, ведёт обучение с начальных по старшие классы.", photo: "" },
+              { icon: "Cross", name: "Фельдшерско-акушерский пункт", type: "Здравоохранение", desc: "Медицинская помощь жителям Выдрино и прилегающих населённых пунктов.", photo: "" },
+              { icon: "BookOpen", name: "Сельская библиотека", type: "Культура", desc: "Хранит фонд краеведческой литературы, периодику и архив местных изданий.", photo: "" },
+              { icon: "Music", name: "Дом культуры", type: "Культура", desc: "Центр общественной и культурной жизни: концерты, выставки, кружки.", photo: "" },
+              { icon: "Landmark", name: "Администрация Выдринского сельского поселения", type: "Управление", desc: "Орган местного самоуправления, решение вопросов жизнеобеспечения села.", photo: "" },
+              { icon: "Train", name: "Железнодорожная станция Выдрино", type: "Транспорт", desc: "Станция на Транссибирской магистрали, связывающая село с регионом с 1899 года.", photo: "https://cdn.poehali.dev/files/0b98062b-b8e7-4a3f-a0f4-6b8da9f72fc8.jpg" },
+              { icon: "Sparkles", name: "Дом детского творчества", type: "Образование", desc: "Развитие творческих способностей детей: кружки, секции, конкурсы и фестивали.", photo: "" },
+              { icon: "Piano", name: "Детская школа искусств", type: "Образование", desc: "Обучение музыке, изобразительному искусству и хореографии для детей Выдрино.", photo: "" },
+              { icon: "Hospital", name: "Выдринская участковая больница", type: "Здравоохранение", desc: "Стационарная медицинская помощь жителям Выдрино и прилегающих сёл Кабанского района.", photo: "" },
             ].map((org, i) => (
-              <div key={i} className="card-hover" style={{ background: "#f8f0e0", border: "1px solid #c4a882", padding: "24px 20px" }}>
-                <div className="flex items-start gap-3 mb-3">
-                  <div style={{ width: "40px", height: "40px", background: "rgba(201,168,76,0.15)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, border: "1px solid rgba(201,168,76,0.3)" }}>
-                    <Icon name={org.icon as "School" | "Cross" | "BookOpen" | "Music" | "Landmark" | "Train" | "Sparkles" | "Piano" | "Hospital"} size={18} style={{ color: "#8b6330" }} />
+              <div key={i} className="card-hover" style={{ background: "#f8f0e0", border: "1px solid #c4a882", overflow: "hidden" }}>
+                {org.photo && (
+                  <div style={{ height: "160px", overflow: "hidden", position: "relative" }}>
+                    <img src={org.photo} alt={org.name} style={{ width: "100%", height: "100%", objectFit: "cover", filter: "sepia(10%) brightness(0.95)" }} />
+                    <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to bottom, transparent 60%, rgba(28,18,8,0.35))" }} />
                   </div>
-                  <span style={{ fontSize: "10px", color: "#c9a84c", letterSpacing: "0.1em", textTransform: "uppercase", fontWeight: 600, paddingTop: "4px" }}>{org.type}</span>
+                )}
+                <div style={{ padding: "20px" }}>
+                  <div className="flex items-start gap-3 mb-3">
+                    <div style={{ width: "36px", height: "36px", background: "rgba(201,168,76,0.15)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, border: "1px solid rgba(201,168,76,0.3)" }}>
+                      <Icon name={org.icon as "School" | "Cross" | "BookOpen" | "Music" | "Landmark" | "Train" | "Sparkles" | "Piano" | "Hospital"} size={16} style={{ color: "#8b6330" }} />
+                    </div>
+                    <span style={{ fontSize: "10px", color: "#c9a84c", letterSpacing: "0.1em", textTransform: "uppercase", fontWeight: 600, paddingTop: "4px" }}>{org.type}</span>
+                  </div>
+                  <div style={{ fontFamily: "Cormorant, serif", fontSize: "17px", color: "#1c1410", fontWeight: 600, marginBottom: "8px", lineHeight: 1.3 }}>{org.name}</div>
+                  <div style={{ fontSize: "13px", color: "#5c4030", lineHeight: 1.6 }}>{org.desc}</div>
                 </div>
-                <div style={{ fontFamily: "Cormorant, serif", fontSize: "17px", color: "#1c1410", fontWeight: 600, marginBottom: "8px", lineHeight: 1.3 }}>{org.name}</div>
-                <div style={{ fontSize: "13px", color: "#5c4030", lineHeight: 1.6 }}>{org.desc}</div>
               </div>
             ))}
           </div>
